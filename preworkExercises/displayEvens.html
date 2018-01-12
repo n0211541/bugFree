@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+
+<script>
+
+	function evenNumbers (starting, end, step)
+{
+var beginArray=new Array();
+var evenArray= new Array();
+var x=document.getElementById("evens");
+var starting=x.elements["startingNumber"].value;
+var end=x.elements["endingNumber"].value;
+var step=x.elements["step"].value;
+	
+		for (var i=starting; i<=end; i++)
+		{
+		beginArray.push(i);
+		}
+	
+	
+		for (var x=0; x<beginArray.length;x=x+step)
+		{
+			if (beginArray[x]%2==0)
+			{
+			evenArray.push(beginArray[x]);
+			
+			}
+		}
+	
+	 document.write ("Here are the even numbers between " + starting +" and " + end + " by " + step + "s:");
+	 document.write (evenArray);
+}
+	 
+	 </script>
+	
+	<style>
+		body
+		{font-family: cursive; font-size: 22px; }
+				
+		table, td
+		{font-size: 18px; text-align:right; padding: 10px 10px 10px 10px; }
+		
+		
+	</style>
+	
+	<title>Display Evens</title>
+	
+</head>
+
+<body>
+	<h1>Sample</h1>
+	<br/>
+	
+	<div id="form">
+		<table>
+		<form id="evens">
+		<tbody>
+			<tr>
+					<td><label for="startingNumber">Starting Number</label></td>
+					<td><input type="text" id="startingNumber" name="startingNumber"></td>
+					
+			</tr>
+			
+			<tr>
+					<td><label for="endingNumber">Ending Number</label></td>
+					<td><input type="text" id="endingNumber" name="endingNumber"></td>
+			</tr>
+			
+			<tr>
+					<td><label for="step">Step</label></td>
+					<td><input type="text" id="step" name="step"></td>
+			</tr>
+		</tbody>
+		<tfoot id="answer">
+			<tr>
+					<td></td>
+					<td><button onclick="evenNumbers()" colspan="2" style="margin-right: 50%"> </td>
+			</tr>
+		</tfoot>
+		</form>
+		</table>
+	</div>
+		
+
+</body>
+
+</html>
+
