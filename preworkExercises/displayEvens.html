@@ -8,14 +8,47 @@
 
 <script>
 
+function verify()
+{
+	var y=document.getElementById("evens");
+	var startNum=parseInt(y.elements["startingNumber"].value);
+	var endNum=parseInt (y.elements["endingNumber"].value);
+	var stepNum= parseInt (y.elements["step"].value);
+	var msg = "";
+	
+	if (stepNum.value <0)
+	{
+		msg+="Please enter a positive number value! \n";
+		stepNum.className = "inpBoxError";
+	}
+	
+	if (endNum <= startNum)
+	{
+		msg+="Please enter a number greater than the starting Number! \n"
+		endNum.className = "inpBoxError";
+	}
+	
+	if (msg=="")
+	{
+	return true;
+	} else {
+	alert(msg);
+	return false;
+	}
+	
+}
+
+
+//Display evens function
 	function evenNumbers (starting, end, step)
 {
 var beginArray=new Array();
 var evenArray= new Array();
 var x=document.getElementById("evens");
-var starting=x.elements["startingNumber"].value;
-var end=x.elements["endingNumber"].value;
-var step=x.elements["step"].value;
+var starting=parseInt(x.elements["startingNumber"].value);
+var end=parseInt (x.elements["endingNumber"].value);
+var step= parseInt (x.elements["step"].value);
+
 	
 		for (var i=starting; i<=end; i++)
 		{
@@ -32,7 +65,9 @@ var step=x.elements["step"].value;
 			}
 		}
 	
-	 document.write ("Here are the even numbers between " + starting +" and " + end + " by " + step + "s:");
+	
+	//document.getElementsById("answer").innerHTML="Here are the even.....;
+	 document.write ("Here are the even numbers between " + starting +" and " + end + " by " + step + "s: ");
 	 document.write (evenArray);
 }
 	 
@@ -44,6 +79,16 @@ var step=x.elements["step"].value;
 				
 		table, td
 		{font-size: 18px; text-align:right; padding: 10px 10px 10px 10px; }
+		
+		.inpBox
+		{
+		background-color: #FFFFFF;
+		border: solid 1px #666666;
+		}
+		.inpBoxError
+		{
+		border: solid 2px #FF0000;
+		}
 		
 		
 	</style>
@@ -58,32 +103,36 @@ var step=x.elements["step"].value;
 	
 	<div id="form">
 		<table>
-		<form id="evens">
-		<tbody>
+		<form id="evens" action="displayEvens.html" method="post" onclick="return verify();">
+		<tbody onload="evenNumbers";>
 			<tr>
 					<td><label for="startingNumber">Starting Number</label></td>
-					<td><input type="text" id="startingNumber" name="startingNumber"></td>
+					<td><input type="text" id="startingNumber" name="startingNumber" class="inpBox" ></td>
 					
 			</tr>
 			
 			<tr>
 					<td><label for="endingNumber">Ending Number</label></td>
-					<td><input type="text" id="endingNumber" name="endingNumber"></td>
+					<td><input type="text" id="endingNumber" name="endingNumber" class="inpBox"></td>
 			</tr>
 			
 			<tr>
 					<td><label for="step">Step</label></td>
-					<td><input type="text" id="step" name="step"></td>
+					<td><input type="text" id="step" name="step" class="inpBox"></td>
 			</tr>
 		</tbody>
 		<tfoot id="answer">
 			<tr>
 					<td></td>
-					<td><button onclick="evenNumbers()" colspan="2" style="margin-right: 50%"> </td>
+					<td><button onclick="evenNumbers()" >Display Evens</td>
 			</tr>
+		
 		</tfoot>
 		</form>
 		</table>
+	</div>
+	<div id = "result">
+		
 	</div>
 		
 

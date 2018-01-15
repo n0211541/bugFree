@@ -2,6 +2,7 @@ function evenNumbers (start, end, step)
 {
 var beginArray=new Array();
 var evenArray= new Array();
+
 	
 		for (var i=start; i<=end; i++)
 		{
@@ -17,7 +18,6 @@ var evenArray= new Array();
 			
 			}
 		}
+	return (evenArray);
 	
-	 console.log ("Here are the even numbers between " + start +" and " + end + " by " + step + "s:");
-	 console.log (evenArray);
 }
