@@ -7,6 +7,7 @@
 	/*header and footers*/
 	
 	head{font-family:Arial;}
+
 			
 		
 	footer{text-align:center}
@@ -24,7 +25,33 @@
 	
 		
 	/*links*/
+	a:link{
+	/*all unvisited links*/
+	text-decoration: underline;
 	
+	background-color:none;
+	color: blue;}
+	
+	a:visited{
+	/*visited links*/
+	text-decoration: underline;
+	
+	bckground-color: none;
+	color: black;}
+	
+	a:hover{
+	/*applies to links under the pointer*/
+	text-decoration: underline;
+	font-weight: bold;
+	background-color: none;
+	color: blue;}
+	
+	a:active{
+	/*applies to activated links*/
+	text-decoration: none;
+	
+	background-color: none;
+	color: blue;}
 
 	
 	

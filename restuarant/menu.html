@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+  
+	<title>Menu</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,15 +10,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 	<link rel="stylesheet" href="restaurantStyles.css">
-    <title>Menu</title>
+    
 	
 	<style>
-		body{background-color:#9ADCDC;}
+		#main{background-color:#9ADCDC; padding:10px 10px 10px 10px}
+		#innerMain{text-align:center}
 		h2{font-size:22px;}
 		h3{font-size:16px;}
 		.menuItem{font-size:14px;}
 		li{padding:10px 10px 10px 10px;}
 		table tr:nth-child(odd){background-color:#C6FFFF;}
+		h1{text-align:center}
 				
 	
 	</style>
@@ -26,7 +30,7 @@
 	<div style="margin:auto; padding:10px;">
 		<div class="container-fluid">
 			<div class ="row">
-				<div class = "col-lg-8 offset-4">
+				<div class = "col-lg-12">
 					<h1>Horton Family Restaurant</h1>
 				</div>
 			</div>
@@ -37,15 +41,16 @@
 			
 				<div class="col-lg-12" >
 					<ul class = "nav nav-tabs">
-						<li><a href="index.html"><i class="glyphicon glyphicon-home">Home</i></a></li>
-						<li><a href="menu.html">Menu</a></li>
-						<li><a href="contactUs.html">Contact Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html"><i class="glyphicon glyphicon-home">Home</i></a></li>
+						<li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+						<li class="nav-item"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
 		
 			<hr/>
-			
+		<div id="main">
+		<div id="innerMain">
 			<div class="row" style="margin-top:20px;">
 				<div class ="col-lg-4 menuItem">
 					<h2>Burger and Fries</h2>
@@ -141,8 +146,8 @@
 			</div>
 			
 		</div>
-			
-			
+		</div>	
+		</div>	
 			<div class="row">
 				<div class = "col-lg-12">
 					<footer>
@@ -159,7 +164,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 			
-		
+		</div>
 		</div>
 	</div>
 	
