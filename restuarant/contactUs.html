@@ -4,82 +4,96 @@
 
 	<head>
 		<title>Contact Us</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 		<link href="restaurantStyles.css" rel="stylesheet" type="text/css"/>
+		
 		<style>
-		#required{
-		font-weight:bold;
-		}
+		#required{font-weight:bold; font-size:17px}
+		form{text-align:center; padding:50px 10px 10px 10px}
+		h1{text-align:center}
 		</style>
+		
+
+
 	</head>
 
 	<body>
-		<h1>Horton Family Restaurant</h1>
-		
-		<div id="navigation">
-			<hr/>
-			<p><a href="index.html" target="_blank">Home</a>
-			<a href="menu.html" target="_blank">Menu</a>
-			<a href="contactUs.html" target="_blank">Contact Us</a>
-			</p>
-			<hr/>
+<div style = "max-width: 1400px; margin: 0 auto; padding: 10px;">
+	<div class="container-fluid">
+		<div class ="row">
+				<div class = "col-lg-12">
+					<h1>Horton Family Restaurant</h1>
+				</div>
 		</div>
-		
-		<div id="form">
-			<form action="submit.html" method="POST">
-			<div id="required">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name"><br/><br/>
-				<label for="email">Email:</label>
-				<input type="text" id="email" name="email"><br/><br/>
-				<label for="phone">Phone:</label>
-				<input type="text" id="phone" name="phone"><br/><br/>
-				
-				<label for="reason">Reason for Inquiry:</label>
-				<select id="reason" name="reason">
-					<option value="other" selected>Other</option>
-					<option value="feedback" selected>Feedback</option>
-					<option value="private" selected>Private Party</option>
-					<option value="default" selected>Catering</option>
-				</select><br/><br/>
+	</div>
+		<div class="row" id="navigation">
+			
+				<div class="col-lg-12" >
+					<ul class = "nav nav-tabs">
+						<li><a href="index.html"><i class="glyphicon glyphicon-home"></i></a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="contactUs.html">Contact Us</a></li>
+					</ul>
+				</div>
+		</div>
+	<div class="container-fluid">
+			<div id="form">
+				<form action="submit.html" method="POST">
+				<div id="required">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name"><br/><br/>
+					<label for="email">Email:</label>
+					<input type="text" id="email" name="email"><br/><br/>
+					<label for="phone">Phone:</label>
+					<input type="text" id="phone" name="phone"><br/><br/>
+					
+					<label for="reason">Reason for Inquiry:</label>
+					<select id="reason" name="reason">
+						<option value="other" selected>Other</option>
+						<option value="feedback" selected>Feedback</option>
+						<option value="private" selected>Private Party</option>
+						<option value="default" selected>Catering</option>
+					</select><br/><br/>
+				</div>
+					<label for="info">Additional Information:</label><br/>
+					<textarea id="info"></textarea><br/><br/>
+					
+					<label for="everBeen">Have you been to the restaurant?</label>
+					<input type="radio" id="choice1" name="everBeen" value="no">
+					<label for="choice1">No</label>
+					<input type="radio" id="choice2" name="everBeen" value="yes">
+					<label for="choice2">Yes</label><br/><br/>
+					
+					<label for="bestDays">Best days to contact you:</label>
+					<input type="checkbox" id="m" name="day" value="m">
+					<label for="m">M</label>
+					<input type="checkbox" id="t" name="day" value="t">
+					<label for="t">T</label>
+					<input type="checkbox" id="w" name="day" value="w">
+					<label for="w">W</label>
+					<input type="checkbox" id="th" name="day" value="th">
+					<label for="th">TH</label>
+					<input type="checkbox" id="f" name="day" value="f">
+					<label for="f">F</label><br/><br/>
+					
+					<input type="submit" name="submit" value="Send Request">
+					
+				</form>
+			
 			</div>
-				<label for="info">Additional Information:</label><br/>
-				<textarea id="info"></textarea><br/><br/>
-				
-				<label for="everBeen">Have you been to the restaurant?</label>
-				<input type="radio" id="choice1" name="everBeen" value="no">
-				<label for="choice1">No</label>
-				<input type="radio" id="choice2" name="everBeen" value="yes">
-				<label for="choice2">Yes</label><br/><br/>
-				
-				<label for="bestDays">Best days to contact you:</label>
-				<input type="checkbox" id="m" name="day" value="m">
-				<label for="m">M</label>
-				<input type="checkbox" id="t" name="day" value="t">
-				<label for="t">T</label>
-				<input type="checkbox" id="w" name="day" value="w">
-				<label for="w">W</label>
-				<input type="checkbox" id="th" name="day" value="th">
-				<label for="th">TH</label>
-				<input type="checkbox" id="f" name="day" value="f">
-				<label for="f">F</label><br/><br/>
-				
-				<input type="submit" name="submit" value="Send Request">
-				
-			</form>
+		
+		<hr/>
+		<div class="row">
+				<div class = "col-lg-12">
+					<footer>
+						<p>40 Main Street, Whoville, ME, 01010</p>
+						<p>207-111-2222</p>
+					</footer>
+				</div>
+			</div>
 		
 		</div>
-		
-		<div id="footer">
-			<hr/>
-			<footer>
-			<p>40 Main Street, Whoville, ME, 01010</p>
-			<p>207-111-2222</p>
-			<hr/>
-			</footer>
-		</div>
-		
-		
-
+</div>
 	</body>
 
 

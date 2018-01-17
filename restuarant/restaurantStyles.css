@@ -1,41 +1,30 @@
 /*Common elements across all pages*/
 
+/*Page Container*/
+
+	#pagecontainer{max-width: 1200px; margin: 0 auto; padding: 10px;}
+
 	/*header and footers*/
 	
-	head{
-		font-family:Arial;
+	head{font-family:Arial;}
+			
 		
-		}
-		
-	#footer{
-		
-		margin: auto;
-		
-		}
+	footer{text-align:center}
+	
+	
+	
+	
+	/*body*/
+	body{ font-family:cursive;}
+	
+	
+	
+	
+	
+	
 		
 	/*links*/
 	
-	a:link{
-	font-family: serif;
-	text-decoration: underline;
-	font-weight:none;
-	}
-	
-	/*visited links appear in a diff color*/
-	a:visited{
-	color:#44749d;
-	text-decoration:underline;
-	}
-	
-	/*hover over a link=bold text*/
-	a:hover{
-	font-weight:bold;
-	text-decoration: none;
-	}
-	
-	a:active{
-	color:#8c22328;
-	text-decoration: none;
-	}
+
 	
 	
