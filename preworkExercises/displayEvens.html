@@ -16,7 +16,7 @@ function verify()
 	var stepNum= parseInt (y.elements["step"].value);
 	var msg = "";
 	
-	if (stepNum.value <0)
+	if (stepNum <0)
 	{
 		msg+="Please enter a positive number value! \n";
 		stepNum.className = "inpBoxError";
@@ -27,6 +27,27 @@ function verify()
 		msg+="Please enter a number greater than the starting Number! \n"
 		endNum.className = "inpBoxError";
 	}
+	
+	//is this number an integer?
+	if (startNum%1 !=0)
+	{
+		msg+="Please enter an ineger! \n"
+		startNum.className = "inpBoxError";
+	}	
+	
+		if (endNum%1 !=0)
+	{
+		msg+="Please enter an ineger!  \n"
+		endNum.className = "inpBoxError";
+	}
+	
+	if (stepNum%1 !=0)
+	{
+		msg+="Please enter an ineger!  \n"
+		stepNum.className = "inpBoxError";
+	}
+	
+
 	
 	if (msg=="")
 	{
@@ -39,6 +60,10 @@ function verify()
 }
 
 
+
+
+
+
 //Display evens function
 	function evenNumbers (starting, end, step)
 {
@@ -46,8 +71,10 @@ var beginArray=new Array();
 var evenArray= new Array();
 var x=document.getElementById("evens");
 var starting=parseInt(x.elements["startingNumber"].value);
-var end=parseInt (x.elements["endingNumber"].value);
-var step= parseInt (x.elements["step"].value);
+var end=parseInt(x.elements["endingNumber"].value);
+var step=  parseInt(x.elements["step"].value);
+
+		verify();
 
 	
 		for (var i=starting; i<=end; i++)
@@ -65,10 +92,10 @@ var step= parseInt (x.elements["step"].value);
 			}
 		}
 	
-	
+	var response= ("Here are the even numbers between " + starting +" and " + end + " by " + step + "s: <br><br>" + evenArray);
 	//document.getElementsById("answer").innerHTML="Here are the even.....;
-	 document.write ("Here are the even numbers between " + starting +" and " + end + " by " + step + "s: ");
-	 document.write (evenArray);
+	  document.getElementById("answer").innerHTML = response;
+	 
 }
 	 
 	 </script>
@@ -103,37 +130,41 @@ var step= parseInt (x.elements["step"].value);
 	
 	<div id="form">
 		<table>
-		<form id="evens" action="displayEvens.html" method="post" onclick="return verify();">
+		<form id="evens" action="displayEvens.html" method="post">
 		<tbody onload="evenNumbers";>
 			<tr>
 					<td><label for="startingNumber">Starting Number</label></td>
-					<td><input type="text" id="startingNumber" name="startingNumber" class="inpBox" ></td>
+					<td><input type="number" id="startingNumber" name="startingNumber" class="inpBox" ></td>
 					
 			</tr>
 			
 			<tr>
 					<td><label for="endingNumber">Ending Number</label></td>
-					<td><input type="text" id="endingNumber" name="endingNumber" class="inpBox"></td>
+					<td><input type="number" id="endingNumber" name="endingNumber" class="inpBox"></td>
 			</tr>
 			
 			<tr>
 					<td><label for="step">Step</label></td>
-					<td><input type="text" id="step" name="step" class="inpBox"></td>
+					<td><input type="number" id="step" name="step" class="inpBox"></td>
 			</tr>
-		</tbody>
-		<tfoot id="answer">
+			
 			<tr>
 					<td></td>
-					<td><button onclick="evenNumbers()" >Display Evens</td>
+					<td><button onclick="evenNumbers(); return false;" >Display Evens</td>
+					
+			</tr>
+			
+			<tr>
+				<td colspan="2"><span id="answer"></span></td>
 			</tr>
 		
-		</tfoot>
+		</tbody>
+		
+
 		</form>
 		</table>
 	</div>
-	<div id = "result">
-		
-	</div>
+
 		
 
 </body>
